@@ -4,7 +4,7 @@ print(__name__)
 
 
 @app.route('/')
-def hello_world():
+def my_home():
     return render_template('./index.html')
 
 
@@ -13,6 +13,6 @@ def about():
     return render_template('./about.html')
 
 
-@app.route('/blog/2020/dogs')
-def blogs2():
-    return 'Blog dog my dog'
+@app.route('/<username>')
+def user(username=None):
+    return render_template('index.html', name=username)
