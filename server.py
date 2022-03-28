@@ -8,11 +8,16 @@ def my_home():
     return render_template('./index.html')
 
 
-@app.route('/about')
+@app.route('/about.html')
 def about():
     return render_template('./about.html')
 
 
-@app.route('/<username>')
-def user(username=None):
-    return render_template('index.html', name=username)
+@app.route('/works.html')
+def works():
+    return render_template('works.html')
+
+
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
